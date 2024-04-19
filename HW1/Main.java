@@ -6,6 +6,7 @@ public class Main {
             System.out.println(i + " bottles of beer on the wall, " + i + " bottles of beer.");
             System.out.println("Take one down, pass it around,");
         }
+        
         System.out.println("No more bottles of beer on the wall.");
     }
 }
