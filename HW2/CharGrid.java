@@ -1,14 +1,14 @@
 public class CharGrid {
-    private int n, m;
     private char[][] grid;
-    void getCharGrid(char[][] grid, int n, int m) {
+    
+    public CharGrid(char[][] grid) {
         this.grid = grid;
-        this.n = n;
-        this.m = m;
     }
-    int charArea(char ch) {
-        int s=0, fou=0;
-        int up=n, down=1, left=m, right=1;
+    
+    int char Area(char ch) {
+        int n = grid.length;
+        int m = grid[0].length;
+        int s=0, fou=0, up=n, down=1, left=m, right=1;
         for (int i=1; i<=n; i++) {
             for (int j=1; j<=m; j++) {
                 if (grid[i][j] == ch) {
@@ -29,32 +29,31 @@ public class CharGrid {
     }
 
     int countPlus() {
+        int n = grid.length;
+        int m = grid[0].length;
         int countplus = 0;
+        if (n < 3 || m < 3)
+            return countplus;
         for (int i=1; i<=n; i++) {
             for (int j=1; j<=m; j++) {
                 int bra = 1, cnt = 0, check = 0;
                 char ck = grid[i][j];
-
                 while(true) {
                     if (j+bra < m+1) {
-                        if (grid[i][j+bra] == ck) {
+                        if (grid[i][j+bra] == ck) 
                             cnt++;
-                        }
                     }
                     if (j-bra >= 1) {
-                        if (grid[i][j-bra] == ck) {
+                        if (grid[i][j-bra] == ck) 
                             cnt++;
-                        }
                     }
                     if (i+bra < n+1) {
-                        if (grid[i+bra][j] == ck) {
+                        if (grid[i+bra][j] == ck) 
                             cnt++;
-                        }
                     }
                     if (i-bra >= 1) {
-                        if (grid[i-bra][j] == ck) {
+                        if (grid[i-bra][j] == ck) 
                             cnt++;
-                        }
                     }
 
                     if (cnt == 4) {
@@ -66,9 +65,8 @@ public class CharGrid {
                         countplus++;
                         break;
                     }
-                    else if (cnt >= 0 && cnt <= 3) {
+                    else if (cnt >= 0 && cnt <= 3) 
                         break;
-                    }
                 }
             }
         }
