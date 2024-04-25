@@ -4,7 +4,7 @@ public class CharGridTest {
 
     //test charArea:
     @Test
-    public void CharArea_char1() {
+    public void testCharArea_char1() {
         char[][] chargrid = new char[][] {
                 {'c', 'a', 'x'},
                 {'b', ' ', 'b'},
@@ -18,7 +18,7 @@ public class CharGridTest {
         assertEquals(4, test.charArea(' '));
     }
     @Test
-    public void CharArea_char2() {
+    public void testCharArea_char2() {
         char[][] chargrid = new char[][] {
                 {'a', 'b', 'c', 'd'},
                 {'a', ' ', 'c', 'd'},
@@ -33,7 +33,7 @@ public class CharGridTest {
         assertEquals(1, test.charArea(' '));
     }
     @Test
-    public void CharArea_char3() {
+    public void testCharArea_char3() {
         char[][] chargrid = new char[][] {
                 {'-', 'b', 'a', '.'},
                 {'b', 'a', '-', '.'},
@@ -49,7 +49,7 @@ public class CharGridTest {
     //test countPlus:
 
     @Test
-    public void CountPlus_char1() {
+    public void testCountPlus_char1() {
         char[][] chargrid = new char[][] {
                 {' ', ' ', 'p', ' ', ' ', ' ', ' ', ' ', ' '},
                 {' ', ' ', 'p', ' ', ' ', ' ', ' ', 'x', ' '},
@@ -63,7 +63,7 @@ public class CharGridTest {
         assertEquals(2, test.countPlus());
     }
     @Test
-    public void CountPlus_char2() {
+    public void testCountPlus_char2() {
         char[][] chargrid = new char[][] {
                 {'a', 'c', 'h', 'a', 'e', 'b', 'c', 'l', 'a'},
                 {'b', 'h', 'h', 'h', 'e', 'a', 'l', 'l', 'l'},
@@ -77,7 +77,7 @@ public class CharGridTest {
         assertEquals(5, test.countPlus());
     }
     @Test
-    public void CountPlus_char3() {
+    public void testCountPlus_char3() {
         char[][] chargrid = new char[][] {
                 {'a', 'a'},
                 {'a', 'b'},
